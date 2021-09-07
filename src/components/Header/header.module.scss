@@ -1,0 +1,28 @@
+.header {
+  position: relative;
+  width: 100vw;
+  height: 940px;
+  overflow: hidden;
+
+  h1 {
+    position: absolute;
+    bottom: 330px;
+    left: 175px;
+  }
+
+  h2 {
+    width: 900px;
+    position: absolute;
+    bottom: 180px;
+    left: 175px;
+    font-weight: normal;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 42px;
+  left: 175px;
+  font-size: 4.8rem;
+  font-weight: bold;
+}

@@ -1,0 +1,17 @@
+.slider {
+  position: relative;
+  background-color: black;
+
+  img {
+    background-color: #000000;
+    opacity: 0.73;
+    object-fit: fill;
+  }
+}
+
+.arrowContainer {
+  position: absolute;
+  bottom: 10px;
+  left: 2px;
+  padding: 1px;
+}
