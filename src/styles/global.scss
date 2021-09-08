@@ -36,13 +36,49 @@ body {
     line-height: 2.8rem;
   }
 
+  main {
+    width: 100%;
+  }
+
   button {
+    position: relative;
     background-color: #000000;
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-transform: lowercase;
     border: none;
     margin: 10px 0;
+    overflow: hidden;
+    cursor: pointer;
+
+    span {
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ffffff;
+      transition: all 0.25s ease-in-out;
+    }
+
+    &:hover {
+      span {
+        color: #000000;
+        mix-blend-mode: multiply;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ffcc48;
+      transform: translateX(-100%);
+      transition: 0.25s ease-in-out;
+    }
+
+    &:hover::before {
+      transform: translate(0);
+    }
   }
 }
 
