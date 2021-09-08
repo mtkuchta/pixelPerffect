@@ -1,24 +1,50 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import * as styles from "./headerSlider.module.scss";
-import img_1 from "../../images/slider/slider_pict_1.png";
-import img_2 from "../../images/slider/slider_pict_2.png";
-import img_3 from "../../images/slider/slider_pict_3.png";
+import { sliderImages } from "../../assets/sliderImages";
 import Arrow from "../Arrow/Arrow";
 
 const HeaderSlider = () => {
-  const sliderImages = [img_1, img_2, img_3];
-  const [currentImage, setCurrentImage] = useState();
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const nextSlide = (nextSlide = currentSlide + 1) => {
+    if (nextSlide >= sliderImages.length) return 0;
+    if (nextSlide < 0) return sliderImages.length - 1;
+    return nextSlide;
+  };
 
   useEffect(() => {
-    setCurrentImage(sliderImages(0));
-  });
+    const timer = setTimeout(() => {
+      setCurrentSlide(nextSlide());
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, [currentSlide]);
+
+  const handleChangeSlide = (e) => {
+    const arrowId = e.target.id ? e.target.id : e.target.parentNode.id;
+    if (arrowId === "left") setCurrentSlide(nextSlide(currentSlide - 1));
+    if (arrowId === "right") setCurrentSlide(nextSlide(currentSlide + 1));
+  };
 
   return (
     <div className={styles.slider}>
-      <img src={img_1} alt="office_photo" className="" />
+      {sliderImages.map((img, index) => {
+        return (
+          <div
+            key={index}
+            className={styles.slide}
+            style={{
+              backgroundImage: `url(${img})`,
+              marginLeft: index === 0 ? `-${currentSlide * 100}%` : undefined,
+            }}
+          ></div>
+        );
+      })}
+
       <div className={styles.arrowContainer}>
-        <Arrow />
+        <Arrow direction="left" onClick={handleChangeSlide} />
+        <Arrow direction="right" onClick={handleChangeSlide} />
       </div>
     </div>
   );

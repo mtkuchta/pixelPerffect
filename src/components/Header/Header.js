@@ -2,6 +2,7 @@ import * as React from "react";
 import * as styles from "./header.module.scss";
 import HeaderSlider from "../HeaderSlider/HeaderSlider";
 import Navbar from "../Navbar/Navbar";
+import ContactForm from "../ContactForm/ContactForm";
 
 const Header = () => {
   return (
@@ -13,6 +14,7 @@ const Header = () => {
       <h2>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi aut,
       </h2>
+      <ContactForm />
     </header>
   );
 };

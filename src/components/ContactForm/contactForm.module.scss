@@ -1,0 +1,66 @@
+.contactForm {
+  position: absolute;
+  top: 178px;
+  left: 65%;
+  width: 449px;
+  height: 638px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 30px;
+
+  h3 {
+    color: #000000;
+    display: block;
+
+    span {
+      display: block;
+      font-size: inherit;
+      color: inherit;
+    }
+  }
+  p {
+    color: #727272;
+    padding: 10px 0;
+  }
+  .bolded {
+    font-weight: bold;
+    color: #000000;
+  }
+
+  input {
+    width: 100%;
+    font-size: 1.8rem;
+    border: 1px solid black;
+    margin: 10px 0;
+    padding: 12px 15px;
+
+    &::placeholder {
+      color: #727272;
+    }
+  }
+
+  label {
+    position: relative;
+    width: 100%;
+    display: flex;
+    color: #000000;
+    padding-left: 30px;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin: 5px 0;
+  }
+
+  input[type="checkbox"] {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+  }
+
+  button {
+    height: 52px;
+    margin-bottom: none;
+  }
+}
