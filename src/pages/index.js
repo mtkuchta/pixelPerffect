@@ -6,7 +6,7 @@ import SectionOffers from "../components/SectionOffers/SectionOffers";
 // markup
 const IndexPage = () => {
   return (
-    <div className="wrapper">
+    <div className="wrapper" style={{ width: "100%", overflow: "hidden" }}>
       <Header />
       <main>
         <SectionOffers />
