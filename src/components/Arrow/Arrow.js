@@ -7,7 +7,7 @@ const Arrow = ({ direction, onClick, isHover, ...rest }) => {
     <div
       className={`${styles.arrowContainer} ${
         direction === "right" ? styles.right : ""
-      } ${isHover ? "isHover" : ""}`}
+      } ${isHover ? styles.isHover : ""}`}
       id={direction}
       onClick={onClick}
       {...rest}
@@ -20,6 +20,7 @@ const Arrow = ({ direction, onClick, isHover, ...rest }) => {
 Arrow.propTypes = {
   direction: PropTypes.oneOf(["left", "right"]),
   onClick: PropTypes.func,
+  isHover: PropTypes.bool,
 };
 
 export default Arrow;

@@ -62,4 +62,16 @@
   &:hover .arrow::before {
     background-color: white;
   }
+
+  &.isHover {
+    &::before {
+      transform: translateX(0);
+    }
+  }
+
+  &.isHover .arrow,
+  &.isHover .arrow::after,
+  &.isHover .arrow::before {
+    background-color: white;
+  }
 }
