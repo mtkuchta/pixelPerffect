@@ -1,0 +1,49 @@
+@import "../../styles/variables";
+
+.sectionOffice {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: $main-paddingY 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 20%;
+    left: 7%;
+    height: 20px;
+    width: 610px;
+    background-color: #000000;
+  }
+
+  .titleContainer {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 38%;
+    padding-left: 8%;
+
+    h1 {
+      color: #000000;
+    }
+  }
+}
+
+.backgroundContainer {
+  width: 85%;
+  height: 642px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.decoration {
+  position: absolute;
+  top: 4%;
+  right: 9%;
+  //   width: 290px;
+  width: 15%;
+  height: 15%;
+  //   height: 145px;
+}

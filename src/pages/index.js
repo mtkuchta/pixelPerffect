@@ -3,6 +3,7 @@ import "../styles/global.scss";
 import Header from "../components/Header/Header";
 import SectionOffers from "../components/SectionOffers/SectionOffers";
 import SectionDetails from "../components/SectionDetails/SectionDetails";
+import SectionOffice from "../components/SectionOffice/SectionOffice";
 
 // markup
 const IndexPage = () => {
@@ -12,6 +13,7 @@ const IndexPage = () => {
       <main>
         <SectionOffers />
         <SectionDetails />
+        <SectionOffice />
       </main>
     </div>
   );
