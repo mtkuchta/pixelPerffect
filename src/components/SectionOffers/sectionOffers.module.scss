@@ -1,9 +1,17 @@
+@import "../../styles/variables";
+
 .offers {
   width: 100%;
-  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: $main-paddingY $main-paddingX 0;
+}
+
+.contentContainer {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  overflow: hidden;
-  padding: 150px 165px;
+  justify-content: space-between;
 }

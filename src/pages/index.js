@@ -2,6 +2,7 @@ import * as React from "react";
 import "../styles/global.scss";
 import Header from "../components/Header/Header";
 import SectionOffers from "../components/SectionOffers/SectionOffers";
+import SectionDetails from "../components/SectionDetails/SectionDetails";
 
 // markup
 const IndexPage = () => {
@@ -10,6 +11,7 @@ const IndexPage = () => {
       <Header />
       <main>
         <SectionOffers />
+        <SectionDetails />
       </main>
     </div>
   );

@@ -1,0 +1,46 @@
+@import "../../styles/variables";
+
+.sectionDetails {
+  width: 100%;
+  padding: $main-paddingY $main-paddingX 0;
+}
+
+.contentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+
+  button {
+    height: 72px;
+    width: 380px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    margin-top: 80px;
+  }
+}
+
+.title {
+  position: relative;
+  width: 25%;
+  height: 360px;
+  padding-right: 8%;
+
+  h2 {
+    display: block;
+    height: 100%;
+    color: #000000;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    width: 130px;
+    background-color: #000000;
+  }
+}

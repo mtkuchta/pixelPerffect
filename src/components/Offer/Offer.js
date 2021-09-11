@@ -27,10 +27,11 @@ const Offer = ({ imgUrl, alt, title, price }) => {
           style={{
             position: "absolute",
             bottom: "0",
-            right: "-20px",
+            right: "-1px",
             zIndex: `10`,
           }}
           isHover={isHover}
+          square
         />
         <div className={styles.description}>
           <div className={styles.content}>
