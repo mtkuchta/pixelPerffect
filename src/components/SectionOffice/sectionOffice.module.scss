@@ -5,12 +5,12 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: $main-paddingY 0;
+  padding: $main-paddingY 0 0;
 
   &::before {
     content: "";
     position: absolute;
-    bottom: 20%;
+    bottom: 8%;
     left: 7%;
     height: 20px;
     width: 610px;
@@ -19,13 +19,16 @@
 
   .titleContainer {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 0;
     width: 38%;
     padding-left: 8%;
 
-    h1 {
+    .officeTitle {
       color: #000000;
+      font-size: 6.5rem;
+      font-weight: bold;
+      line-height: 7.5rem;
     }
   }
 }
@@ -33,17 +36,14 @@
 .backgroundContainer {
   width: 85%;
   height: 642px;
-
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .decoration {
   position: absolute;
-  top: 4%;
+  top: 6%;
   right: 9%;
-  //   width: 290px;
   width: 15%;
   height: 15%;
-  //   height: 145px;
 }

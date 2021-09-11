@@ -4,6 +4,7 @@ import Header from "../components/Header/Header";
 import SectionOffers from "../components/SectionOffers/SectionOffers";
 import SectionDetails from "../components/SectionDetails/SectionDetails";
 import SectionOffice from "../components/SectionOffice/SectionOffice";
+import SectionNews from "../components/SectionNews/SectionNews";
 
 // markup
 const IndexPage = () => {
@@ -14,6 +15,7 @@ const IndexPage = () => {
         <SectionOffers />
         <SectionDetails />
         <SectionOffice />
+        <SectionNews />
       </main>
     </div>
   );

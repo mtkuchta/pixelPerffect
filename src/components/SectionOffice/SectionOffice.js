@@ -11,7 +11,7 @@ const SectionOffice = () => {
         style={{ backgroundImage: `url(${office})` }}
       ></div>
       <div className={styles.titleContainer}>
-        <h1>Lorem ipsum vs własne biuro</h1>
+        <p className={styles.officeTitle}>Lorem ipsum vs własne biuro</p>
       </div>
       <div
         className={styles.decoration}
