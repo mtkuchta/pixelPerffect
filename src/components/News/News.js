@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as styles from "./news.module.scss";
 import { Link } from "gatsby";
+import PropTypes from "prop-types";
 
 const News = ({ img, id, date, title }) => {
   return (
@@ -11,11 +12,18 @@ const News = ({ img, id, date, title }) => {
       ></div>
       <p>{date}</p>
       <h3>{title}</h3>
-      <Link to="/news" className={styles.more}>
+      <Link to={`/news/${id}`} className={styles.more}>
         Więcej
       </Link>
     </div>
   );
+};
+
+News.propTypes = {
+  img: PropTypes.object,
+  id: PropTypes.number,
+  date: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default News;

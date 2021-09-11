@@ -6,7 +6,7 @@ const Arrow = ({ direction, onClick, isHover, square, black, ...rest }) => {
   return (
     <div
       className={`${styles.arrowContainer} ${
-        direction === "right" ? styles.right : ""
+        direction === "right" ? styles.directionRight : ""
       } ${isHover ? styles.isHover : ""} ${square ? styles.square : ""} ${
         black ? styles.black : ""
       }`}
