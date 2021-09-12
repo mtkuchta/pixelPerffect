@@ -4,7 +4,7 @@ import Logo from "../Logo/Logo";
 import { Link } from "gatsby";
 import { routes } from "../../assets/routes";
 import decoration from "../../images/footer_decoration.png";
-import ADream from "../../images/Adream.png";
+import adream from "../../images/adream.png";
 
 const Footer = () => {
   return (
@@ -39,7 +39,7 @@ const Footer = () => {
           Polityka prywatności
         </Link>
         <span>
-          Proudly designed by <img src={ADream} alt="Adream logo" />
+          Proudly designed by <img src={adream} alt="ADream logo" />
         </span>
       </div>
     </footer>
