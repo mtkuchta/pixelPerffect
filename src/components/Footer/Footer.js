@@ -39,7 +39,7 @@ const Footer = () => {
           Polityka prywatności
         </Link>
         <span>
-          Proudly designed by <img src={ADream} alt="" />
+          Proudly designed by <img src={ADream} alt="Adream logo" />
         </span>
       </div>
     </footer>

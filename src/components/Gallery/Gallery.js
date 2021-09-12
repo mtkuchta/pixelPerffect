@@ -1,20 +1,38 @@
 import * as React from "react";
+import { useState } from "react";
 import * as styles from "./gallery.module.scss";
 import gallery_1 from "../../images/gallery/gallery_1.png";
 import gallery_2 from "../../images/gallery/gallery_2.png";
 import gallery_3 from "../../images/gallery/gallery_3.png";
 import gallery_4 from "../../images/gallery/gallery_4.png";
 import Arrow from "../Arrow/Arrow";
+import GalleryLightbox from "../GalleryLightbox/GalleryLightbox";
 
 const galleryImages = [gallery_1, gallery_2, gallery_3, gallery_4];
 
 const Gallery = () => {
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [openedPhoto, setOpenedPhoto] = useState(0);
+
+  const handleCloseLightbox = () => setIsLightboxOpen(false);
+
+  const handleOpenLightbox = (e) => {
+    console.log(e.target.parentNode.id);
+    setOpenedPhoto(Number(e.target.parentNode.id));
+    setIsLightboxOpen(true);
+  };
+
   return (
     <section className={styles.gallery}>
       <div className={styles.contentContainer}>
         {galleryImages.map((image, index) => {
           return (
-            <div className={styles.imgContainer}>
+            <div
+              key={`gallery_${index}`}
+              id={index}
+              className={styles.imgContainer}
+              onClick={handleOpenLightbox}
+            >
               <img src={image} alt="" />
             </div>
           );
@@ -41,6 +59,12 @@ const Gallery = () => {
           }}
         />
       </div>
+      <GalleryLightbox
+        images={galleryImages}
+        isOpen={isLightboxOpen}
+        onClose={handleCloseLightbox}
+        photo={openedPhoto}
+      />
     </section>
   );
 };

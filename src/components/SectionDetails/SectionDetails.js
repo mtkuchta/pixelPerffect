@@ -21,7 +21,7 @@ const SectionDetails = () => {
             />
           );
         })}
-        <button>
+        <button className={"pageButton"} style={{ marginTop: "40px" }}>
           <span>Dowiedz się więcej</span>
           <Arrow
             direction="right"

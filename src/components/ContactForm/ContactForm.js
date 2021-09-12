@@ -18,7 +18,7 @@ const ContactForm = () => {
         Wyrażam dobrowolną zgodę na przetwarzanie moich danych osobowych
         więcej...
       </label>
-      <button type="submit">
+      <button className={`pageButton`} type="submit">
         <span>wyślij</span>
       </button>
     </form>
