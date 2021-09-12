@@ -3,22 +3,21 @@ import { Link } from "gatsby";
 import * as styles from "./navbar.module.scss";
 import instagramIcon from "../../images/instagramIcon.png";
 import facebookIcon from "../../images/facebookIcon.png";
+import { routes } from "../../assets/routes";
 
 const Navbar = () => {
-  const routes = [
-    { name: "Poznaj przestrzeń", to: "" },
-    { name: "Oferta", to: "" },
-    { name: "Lokalizacja", to: "" },
-    { name: "Własne biuro", to: "" },
-    { name: "Kontakt", to: "" },
-  ];
+  const navRoutes = routes
+    .sort((a, b) => {
+      return a.id - b.id;
+    })
+    .filter((item) => item.id != 0);
 
   return (
     <div className={styles.navbarContainer}>
       <nav>
-        {routes.map((route, index) => {
+        {navRoutes.map((route, index) => {
           return (
-            <Link className={styles.link} key={index} to={route.to}>
+            <Link className={styles.link} key={index} to={route.path}>
               {route.name}
             </Link>
           );

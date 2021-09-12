@@ -6,6 +6,7 @@ import SectionDetails from "../components/SectionDetails/SectionDetails";
 import SectionOffice from "../components/SectionOffice/SectionOffice";
 import SectionNews from "../components/SectionNews/SectionNews";
 import Gallery from "../components/Gallery/Gallery";
+import Footer from "../components/Footer/Footer";
 
 // markup
 const IndexPage = () => {
@@ -18,6 +19,7 @@ const IndexPage = () => {
         <SectionOffice />
         <SectionNews />
         <Gallery />
+        <Footer />
       </main>
     </div>
   );
