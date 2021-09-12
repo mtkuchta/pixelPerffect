@@ -1,31 +1,39 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import * as styles from "./gallery.module.scss";
-import gallery_1 from "../../images/gallery/gallery_1.png";
-import gallery_2 from "../../images/gallery/gallery_2.png";
-import gallery_3 from "../../images/gallery/gallery_3.png";
-import gallery_4 from "../../images/gallery/gallery_4.png";
 import Arrow from "../Arrow/Arrow";
 import GalleryLightbox from "../GalleryLightbox/GalleryLightbox";
-
-const galleryImages = [gallery_1, gallery_2, gallery_3, gallery_4];
+import { galleryImages } from "../../assets/galleryImages";
 
 const Gallery = () => {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [openedPhoto, setOpenedPhoto] = useState(0);
+  const [startIndex, setStartIndex] = useState(0);
+  const [galleryItems, setGalleryItems] = useState([]);
 
-  const handleCloseLightbox = () => setIsLightboxOpen(false);
+  const handlePagination = (e) => {
+    if (galleryImages.length === 4) return;
+    if (e.target.id === "prev" && startIndex > 0) setStartIndex(startIndex - 4);
+    if (e.target.id === "next") setStartIndex(startIndex + 4);
+  };
 
   const handleOpenLightbox = (e) => {
-    console.log(e.target.parentNode.id);
     setOpenedPhoto(Number(e.target.parentNode.id));
     setIsLightboxOpen(true);
   };
 
+  const handleCloseLightbox = () => setIsLightboxOpen(false);
+
+  useEffect(() => {
+    if (galleryImages.length <= 4) setGalleryItems(galleryImages);
+    if (galleryImages.length > 4)
+      setGalleryItems(galleryImages.slice(startIndex, startIndex + 4));
+  }, [startIndex]);
+
   return (
     <section className={styles.gallery}>
       <div className={styles.contentContainer}>
-        {galleryImages.map((image, index) => {
+        {galleryItems.map((image, index) => {
           return (
             <div
               key={`gallery_${index}`}
@@ -40,23 +48,25 @@ const Gallery = () => {
         <p className={styles.title}>Galeria</p>
         <Arrow
           square
-          small
           style={{
             position: "absolute",
             top: "50%",
             left: "2%",
             transform: "translateY(-50%)",
           }}
+          id="prev"
+          onClick={handlePagination}
         />
         <Arrow
           square
-          small
           style={{
             position: "absolute",
             top: "50%",
             right: "2%",
             transform: "translateY(-50%) rotate(180deg)",
           }}
+          id="next"
+          onClick={handlePagination}
         />
       </div>
       <GalleryLightbox

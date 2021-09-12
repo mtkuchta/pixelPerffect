@@ -12,7 +12,6 @@ export const detailsData = [
     img: detail_2,
     description: "Lorem ipsum dolor sit amet conse",
     alt: "kawa",
-    alt: "kawa",
   },
   {
     img: detail_3,

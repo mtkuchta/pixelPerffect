@@ -38,7 +38,7 @@ const GalleryLightbox = ({ images, isOpen, onClose, photo }) => {
 };
 
 GalleryLightbox.propTypes = {
-  images: PropTypes.arrayOf(PropTypes.object),
+  images: PropTypes.arrayOf(PropTypes.string),
   isOpen: PropTypes.bool,
   onClose: PropTypes.func,
   photo: PropTypes.number,

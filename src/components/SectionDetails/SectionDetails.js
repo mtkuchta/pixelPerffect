@@ -5,6 +5,7 @@ import { detailsData } from "../../assets/detailsData";
 import Arrow from "../Arrow/Arrow";
 
 const SectionDetails = () => {
+  console.log(detailsData);
   return (
     <section className={styles.sectionDetails}>
       <div className={styles.contentContainer}>

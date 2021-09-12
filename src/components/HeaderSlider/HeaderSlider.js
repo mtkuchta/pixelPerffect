@@ -3,8 +3,9 @@ import { useState, useEffect } from "react";
 import * as styles from "./headerSlider.module.scss";
 import { sliderImages } from "../../assets/sliderImages";
 import Arrow from "../Arrow/Arrow";
+import SlideBar from "../SlideBar/SlideBar";
 
-const HeaderSlider = () => {
+const HeaderSlider = ({ playTime }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = (nextSlide = currentSlide + 1) => {
@@ -16,7 +17,7 @@ const HeaderSlider = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setCurrentSlide(nextSlide());
-    }, 3000);
+    }, playTime);
 
     return () => clearInterval(timer);
   }, [currentSlide]);
@@ -46,6 +47,7 @@ const HeaderSlider = () => {
         <Arrow direction="left" onClick={handleChangeSlide} />
         <Arrow direction="right" onClick={handleChangeSlide} />
       </div>
+      <SlideBar slide={currentSlide} playTime={playTime} />
     </div>
   );
 };

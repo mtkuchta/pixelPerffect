@@ -12,7 +12,7 @@ const DetailsItem = ({ img, alt, description }) => {
 };
 
 DetailsItem.propTypes = {
-  img: PropTypes.object,
+  img: PropTypes.string,
   alt: PropTypes.string,
   description: PropTypes.string,
 };

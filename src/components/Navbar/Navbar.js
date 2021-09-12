@@ -10,14 +10,14 @@ const Navbar = () => {
     .sort((a, b) => {
       return a.id - b.id;
     })
-    .filter((item) => item.id != 0);
+    .filter((item) => item.id !== 0);
 
   return (
     <div className={styles.navbarContainer}>
       <nav>
         {navRoutes.map((route, index) => {
           return (
-            <Link className={styles.link} key={index} to={route.path}>
+            <Link className={styles.linkNavbar} key={index} to={route.path}>
               {route.name}
             </Link>
           );

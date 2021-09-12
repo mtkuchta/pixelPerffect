@@ -23,8 +23,6 @@ Arrow.propTypes = {
   direction: PropTypes.oneOf(["left", "right"]),
   onClick: PropTypes.func,
   isHover: PropTypes.bool,
-  square: PropTypes.bool,
-  black: PropTypes.bool,
 };
 
 export default Arrow;

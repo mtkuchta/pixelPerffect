@@ -20,7 +20,7 @@ const News = ({ img, id, date, title }) => {
 };
 
 News.propTypes = {
-  img: PropTypes.object,
+  img: PropTypes.string,
   id: PropTypes.number,
   date: PropTypes.string,
   title: PropTypes.string,

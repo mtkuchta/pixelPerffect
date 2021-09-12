@@ -6,9 +6,10 @@
 
   h1 {
     position: absolute;
-    bottom: 330px;
+    bottom: 345px;
     left: 175px;
     color: #f5f5f5;
+    letter-spacing: -2px;
   }
 
   h2 {
@@ -17,6 +18,7 @@
     bottom: 180px;
     left: 175px;
     font-weight: normal;
+    line-height: 7.2rem;
     color: #f5f5f5;
   }
 }
